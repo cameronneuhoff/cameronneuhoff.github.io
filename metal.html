@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Cameron Neuhoff - Metal</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            overflow: auto;
+            color: #404040;
+            }
+        .headerBox {
+            width: 100%;
+            min-width: 650px;
+            height: 30vh;
+            min-height: 120px;
+            position: relative;
+            padding: 0px;
+            margin: 0px;
+        }
+        .header {
+            position: absolute;
+            bottom: 60px;
+            width: inherit;
+        }
+        .aboutBox{
+            width: 30%;
+            min-height: inherit;
+            height: inherit;
+            position: absolute;
+            right: 0px;
+        }
+        .aboutCircle {
+            width: 60px;
+            height: 60px;
+            border-radius: 60px;
+            background-color: white;
+            background: repeating-linear-gradient(
+                90deg,
+                #404040,
+                #404040 1px,
+                white 1px,
+                white 3px
+            );
+            position: absolute;
+            bottom: 60px;
+            left: 40%;
+        }
+        .aboutText {
+            font-size: .9em;
+            color: white;
+            letter-spacing: 3px;
+            text-shadow:
+                -1px -1px 0 white,  
+                1px -1px 0 white,
+                -1px 1px 0 white,
+                1px 1px 0 white;
+            font-style: bold;
+            text-align: center;
+            padding-top: .5em;
+            padding-left: .2em;
+            -ms-transform: rotate(10deg);
+            -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+        h1 {
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0px;
+            padding: 0px;
+            font-style: italic;
+        }
+        h2 {
+            text-align: center;
+            font-size: .7em;
+            font-weight: normal;
+            margin: 0px;
+            padding: 0px;
+            font-style: italic;
+            letter-spacing: 2px;
+        }
+        h3 {
+            font-size: .9em;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+        .menu {
+            margin: auto;
+            padding-top: 0px;
+            max-width: 100%;
+            min-width: 650px;
+            overflow: hidden;
+        }
+        .menuItem {
+            width: 20%;
+            display: inline-block;
+            float: left;
+            margin: 0px;
+            padding: 0px;
+        }
+        .material {
+            width: 90px;
+            border-bottom: 1px solid #404040;
+            margin: auto;
+            padding: 5px;
+            text-align: center;
+            vertical-align: top;
+        }
+        .itemsHidden {
+            visibility: hidden;
+            font-size: .8em;
+        }
+        #wood:hover {
+            color: #798eab;
+            border-bottom-color: #798eab;
+        }
+        #metal {
+            height: 250px;
+            color: #f8a563;
+            border-bottom-color: #f8a563;
+        }
+        #earth {
+            height: 180px;
+        }
+        #earth:hover {
+            color: #dcd2d0;
+            border-bottom-color: #dcd2d0;
+        }
+        #stone:hover {
+            color: #fadeaf;
+            border-bottom-color: #fadeaf;
+        }
+        #light:hover {
+            color: #3f5a77;
+            border-bottom-color: #3f5a77;
+        }
+        #mediaBox {
+            width: 98px;
+            height: 98px;
+            border: 1px solid #f8a563;
+            margin: 1px auto;
+            display: none;
+        }
+        #mediaImg {
+            width: 94px;
+            height: 94px;
+            padding: 2px;
+        }
+        .pieces{
+            font-family: "Arial";
+            font-size: .8em;
+            
+        }
+        .itemsShown{
+            display: none;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    
+
+    
+    <div class="headerBox">
+        <div class="header">
+            <h1><a class="home" href="index.html">Cameron David Neuhoff</a></h1>
+            <h2>40&deg 59' 19.853" N 98&deg 2' 58.171" W</h2>
+        </div>
+        <div class="aboutBox">
+            <a href="about.html">
+                <div class="aboutCircle">
+                <p class="aboutText">about</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+
+    
+    <div class="menu">
+        
+        <div class="menuItem">
+            <a href="wood.html">
+                <div class="material" id="wood">
+                    <h3>Wood</h3>
+                </div>
+            </a>
+        </div>
+        <div class="menuItem">
+                <div class="material" id="metal">
+                    <h3>Metal</h3>
+                    <div class="itemsShown">
+                        <p><a class="pieces" id="piece1" href="metal/one.html">
+                            one</a></p>
+                        <p><a class="pieces" id="piece2" href="metal/one.html">
+                            two</a></p>
+                        <p><a class="pieces" id="piece3" href="metal/one.html">
+                            three</a></p>
+                        <p><a class="pieces" id="piece4" href="metal/one.html">
+                            four</a></p>
+                        <p><a class="pieces" id="piece5" href="metal/one.html">
+                            five</a></p>
+                        <p><a class="pieces" id="piece6" href="metal/one.html">
+                            six</a></p>
+                    </div>
+                </div>
+            <div id="mediaBox"><img id="mediaImg" src="media/mediaImgBlank.jpg"></img></div>
+        </div>
+        <div class="menuItem">
+           <a class="menuItemLink" href="earth.html">
+               <div class="material" id="earth">
+                   <h3>Earth</h3>
+                   <div class="itemsHidden">
+                   <p>one</p>
+                   <p>two</p>
+                   <p>three</p>
+                   <p>four</p>
+                   </div>
+               </div>
+           </a>
+        </div>
+        <div class="menuItem">
+           <a href="stone.html">
+               <div class="material" id="stone">
+                   <h3>Stone</h3>
+                   <div class="itemsHidden">
+                   <p>one</p>
+                   <p>two</p>
+                   </div>
+               </div>
+           </a>
+        </div>
+       <div class="menuItem">
+            <a href="light.html">
+                <div class="material" id="light">
+                    <h3>Light</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function(){
+            $(".itemsShown").fadeIn("fast");
+            $("#mediaBox").fadeIn("fast");
+            $(".home").click(
+                function() {
+                    event.preventDefault();
+                    newLocation = this.href;
+                    $(".itemsShown").fadeOut("fast", newpage);
+                    $("#mediaBox").fadeOut("fast", newpage);
+                    });
+            $(".menuItemLink").click(
+                function() {
+                    event.preventDefault();
+                    newLocation = this.href;
+                    $(".itemsShown").fadeOut("fast", newpage);
+                    $("#mediaBox").fadeOut("fast", newpage);
+                    });
+            function newpage() {
+                window.location = newLocation;
+                };
+            $("#piece1").hover(
+                function(){
+                    $("#mediaImg").attr("src", "media/metal01.jpg")
+                },
+                function(){
+                    $("#mediaImg").attr("src", "media/mediaImgBlank.jpg")
+                });
+            $("#piece2").hover(
+                function(){
+                    $("#mediaImg").attr("src", "media/metal02.jpg")
+                },
+                function(){
+                    $("#mediaImg").attr("src", "media/mediaImgBlank.jpg")
+                });
+            $("#piece3").hover(
+                function(){
+                    $("#mediaImg").attr("src", "media/metal03.jpg")
+                },
+                function(){
+                    $("#mediaImg").attr("src", "media/mediaImgBlank.jpg")
+                });
+            $("#piece4").hover(
+                function(){
+                    $("#mediaImg").attr("src", "media/metal04.jpg")
+                },
+                function(){
+                    $("#mediaImg").attr("src", "media/mediaImgBlank.jpg")
+                });
+            $("#piece1").hover(
+                function(){
+                    $("#mediaImg").attr("src", "media/metal05.jpg")
+                },
+                function(){
+                    $("#mediaImg").attr("src", "media/mediaImgBlank.jpg")
+                });
+            $("#piece5").hover(
+                function(){
+                    $("#mediaImg").attr("src", "media/metal01.jpg")
+                },
+                function(){
+                    $("#mediaImg").attr("src", "media/mediaImgBlank.jpg")
+                });
+            $("#piece6").hover(
+                function(){
+                    $("#mediaImg").attr("src", "media/metal06.jpg")
+                },
+                function(){
+                    $("#mediaImg").attr("src", "media/mediaImgBlank.jpg")
+                });
+        });
+        
+    </script>    
+
+</body>
+</html>

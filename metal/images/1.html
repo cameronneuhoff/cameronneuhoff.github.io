@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Image 1</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            overflow: auto;
+            color: #404040;
+            width: 98%;
+            height: 98%;
+        }
+        #wrapper {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        #container {
+            width: 66%;
+            height: auto;
+            display: inline-block;
+            margin: 0px;
+        }
+        #imgBox {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            display: inline-block;
+            border-radius: 1%;
+        }
+        #imgCycleLeft {
+            width: 50%;
+            height: 100%;
+            cursor: w-resize;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 1000;
+        }
+        #imgCycleRight {
+            width: 50%;
+            height: 100%;
+            cursor: e-resize;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            z-index: 1000;
+        }
+        a {
+            text-decoration: none;
+            color: #404040;
+        }
+        h1 {
+            margin: 0px;
+            padding: .5em 0px 2em 0px;
+            font-size: .9em;
+            font-style: normal;
+            font-weight: normal;
+        }
+        h2 {
+            margin: 0px;
+            padding: .5em 0px 2em 0px;
+            font-size: .8em;
+            font-style: italic;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="container">
+            <div id="imgBox">
+                <a href="4.html">
+                    <div id="imgCycleLeft"></div>
+                </a>
+                <a href="2.html">
+                    <div id="imgCycleRight"></div>
+                </a>
+                <img src="../media/160805_25.jpg">
+            </div>
+        
+            <h1>A photograph of my work.</h1>
+            <h2>
+                <a href="../one.html">back</a>
+            </h2>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).keydown(function(e) {
+            if (e.keyCode == 37) {
+                window.location = "4.html";
+            } else if (e.keyCode == 39) {
+                window.location = "2.html";
+            }
+        });
+    </script>
+    
+</body>
+</html>

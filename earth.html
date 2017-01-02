@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>CDN</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: "Courier New", monospace;
+            overflow: auto;
+            }
+        .headerBox {
+            width: 100%;
+            min-width: 650px;
+            height: 30vh;
+            min-height: 120px;
+            position: relative;
+            padding: 0px;
+            margin: 0px;
+        }
+        .header {
+            position: absolute;
+            bottom: 60px;
+            width: inherit;
+        }
+        .aboutBox{
+            width: 30%;
+            min-height: inherit;
+            height: inherit;
+            position: absolute;
+            right: 0px;
+        }
+        .aboutCircle {
+            width: 60px;
+            height: 60px;
+            border: 1px solid black;
+            border-radius: 60px;
+            background-color: black;
+            position: absolute;
+            bottom: 60px;
+            left: 40%;
+        }
+        .aboutText {
+            font-size: .8em;
+            color: white;
+            text-align: center;
+            padding-top: .6em;
+            padding-left: .3em;
+            -ms-transform: rotate(15deg);
+            -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+        }
+        .aboutCircle:hover {
+            background-color: grey;
+            border-color: grey;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+        h1 {
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0px;
+            padding: 0px;
+            color: white;
+            text-shadow: 2px 1px black;
+        }
+        h2 {
+            text-align: center;
+            font-size: .8em;
+            font-weight: normal;
+            margin: 0px;
+            padding: 0px;
+        }
+        h3 {
+            font-size: 1em;
+            font-weight: bold;
+        }
+        .menu {
+            margin: auto;
+            padding-top: 0px;
+            max-width: 100%;
+            min-width: 650px;
+            overflow: auto;
+        }
+        .menuItem {
+            width: 20%;
+            display: inline-block;
+            float: left;
+            margin: 0px;
+            padding: 0px;
+        }
+        .material {
+            width: 100px;
+            border-bottom: 1px solid black;
+            margin: auto;
+            padding: 5px;
+            text-align: center;
+            vertical-align: top;
+        }
+        .itemsHidden {
+            visibility: hidden;
+        }
+        #wood:hover {
+            color: #798eab;
+            border-bottom-color: #798eab;
+        }
+        #metal {
+            height: 250px;
+        }    
+        #metal:hover {   
+            color: #f8a563;
+            border-bottom-color: #f8a563;
+        }
+        #earth {
+            height: 180px;
+            color: #dcd2d0;
+            border-bottom-color: #dcd2d0;
+        }
+        #stone:hover {
+            color: #fadeaf;
+            border-bottom-color: #fadeaf;
+        }
+        #light:hover {
+            color: #3f5a77;
+            border-bottom-color: #3f5a77;
+        }
+        #mediaBox {
+            width: 110px;
+            height: 110px;
+            border: 1px solid #dcd2d0;
+            margin: 10px auto;
+            display: none;
+        }
+        #mediaImg {
+            padding: 2px;
+        }
+        .pieces:hover {
+            font-weight: normal;
+        }
+        .itemsShown{
+            display: none;
+        }
+        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function(){
+            $(".itemsShown").fadeIn("fast");
+            $("#mediaBox").fadeIn("fast");
+            $(".home").click(
+                function() {
+                    event.preventDefault();
+                    newLocation = this.href;
+                    $(".itemsShown").fadeOut("fast", newpage);
+                    $("#mediaBox").fadeOut("fast", newpage);
+                    });
+            $(".menuItemLink").click(
+                function() {
+                    event.preventDefault();
+                    newLocation = this.href;
+                    $(".itemsShown").fadeOut("fast", newpage);
+                    $("#mediaBox").fadeOut("fast", newpage);
+                    });
+            function newpage() {
+                window.location = newLocation;
+                };
+            $("#piece1").hover(
+                function(){
+                    $("#mediaImg").attr("src", "media/metal01.jpg")
+                },
+                function(){
+                    $("#mediaImg").attr("src", "media/mediaImgBlank.jpg")
+                });
+            $("#piece2").hover(
+                function(){
+                    $("#mediaImg").attr("src", "media/metal02.jpg")
+                },
+                function(){
+                    $("#mediaImg").attr("src", "media/mediaImgBlank.jpg")
+                });
+            $("#piece3").hover(
+                function(){
+                    $("#mediaImg").attr("src", "media/metal03.jpg")
+                },
+                function(){
+                    $("#mediaImg").attr("src", "media/mediaImgBlank.jpg")
+                });
+            $("#piece4").hover(
+                function(){
+                    $("#mediaImg").attr("src", "media/metal04.jpg")
+                },
+                function(){
+                    $("#mediaImg").attr("src", "media/mediaImgBlank.jpg")
+                });
+        });
+        
+    </script>
+</head>
+
+<body>
+    
+
+    
+    <div class="headerBox">
+        <div class="header">
+            <h1><a class="home" href="index.html">Cameron David Neuhoff</a></h1>
+            <h2>40&deg 59' 19.853" N 98&deg 2' 58.171" W</h2>
+        </div>
+        <div class="aboutBox">
+            <a href="about.html">
+                <div class="aboutCircle">
+                <p class="aboutText">about</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+
+    
+    <div class="menu">
+        
+        <div class="menuItem">
+            <a href="wood.html">
+                <div class="material" id="wood">
+                    <h3>Wood</h3>
+                </div>
+            </a>
+        </div>
+        <div class="menuItem">
+            <a class="menuItemLink" href="metal.html">
+                <div class="material" id="metal">
+                    <h3>Metal</h3>
+                    <div class="itemsHidden">
+                        <p>one</p>
+                        <p>two</p>
+                        <p>three</p>
+                        <p>four</p>
+                        <p>five</p>
+                        <p>six</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="menuItem">
+               <div class="material" id="earth">
+                   <h3>Earth</h3>
+                   <div class="itemsShown">
+                        <p><a class="pieces" id="piece1" href="metal/one.html">
+                            one</a></p>
+                        <p><a class="pieces" id="piece2" href="metal/one.html">
+                            two</a></p>
+                        <p><a class="pieces" id="piece3" href="metal/one.html">
+                            three</a></p>
+                        <p><a class="pieces" id="piece4" href="metal/one.html">
+                            four</a></p>
+                   </div>
+               </div>
+               <div id="mediaBox"><img id="mediaImg" src="media/mediaImgBlank.jpg"></img></div>
+        </div>
+        <div class="menuItem">
+           <a href="stone.html">
+               <div class="material" id="stone">
+                   <h3>Stone</h3>
+                   <div class="itemsHidden">
+                   <p>one</p>
+                   <p>two</p>
+                   </div>
+               </div>
+           </a>
+        </div>
+       <div class="menuItem">
+            <a href="light.html">
+                <div class="material" id="light">
+                    <h3>Light</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+
+
+
+
+</body>
+</html>
